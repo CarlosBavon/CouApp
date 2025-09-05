@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 // Set base URL for API calls
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://couappback.onrender.com";
 
 function App() {
   const [entries, setEntries] = useState([]);
