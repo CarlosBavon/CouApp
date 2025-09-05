@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">bav</string>
+    <string name="title_activity_main">bav</string>
+    <string name="package_name">com.bav.couplejournal</string>
+    <string name="custom_url_scheme">com.bav.couplejournal</string>
+</resources>

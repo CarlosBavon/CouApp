@@ -1,38 +1,240 @@
+/* Beautiful background */
+.login-container,
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: linear-gradient(135deg, #f5c3e6 0%, #b19cd9 100%);
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Login box */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-box h1 {
+  color: #e83e8c;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.login-box p {
+  color: #6c63ff;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.login-box button:hover {
+  background: #e83e8c;
+}
+
+/* App header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #e83e8c;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header button {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: #e83e8c;
+}
+
+/* Journal container */
+.journal-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Add entry section */
+.add-entry {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-entry h2 {
+  color: #6c63ff;
+  margin-top: 0;
+}
+
+.add-entry textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.add-entry button {
+  background: #6c63ff;
   color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-entry button:hover {
+  background: #e83e8c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Entries list */
+.entries-list {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.entries-list h2 {
+  color: #6c63ff;
+  margin-top: 0;
+}
+
+.entry {
+  border-left: 4px solid #e83e8c;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background: rgba(245, 195, 230, 0.2);
+  border-radius: 0 10px 10px 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+.date {
+  color: #888;
+}
+
+.entry p {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 25px;
+    margin: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
+
+  .journal-container {
+    padding: 0 10px;
+  }
+}
+
+/* Additional styles for the new features */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info span {
+  color: #6c63ff;
+  font-weight: bold;
+}
+
+.auth-toggle {
+  margin-top: 20px;
+  color: #666;
+}
+
+.auth-toggle span {
+  color: #6c63ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-toggle span:hover {
+  color: #e83e8c;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
